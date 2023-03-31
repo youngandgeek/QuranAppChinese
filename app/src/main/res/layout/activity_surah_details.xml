@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D5D6D6"
+    tools:context=".SurahDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/_bg__frame_2_ek2_shape"
+
+        >
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:layout_margin="1dp"
+            android:src="@drawable/ic_baseline_search_24"
+
+            />
+
+        <EditText
+            android:id="@+id/search_ayah"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="3"
+            android:textAlignment="center"
+            android:textColor="#2E2C2C"
+            android:ems="10"
+            android:maxLines="1"
+            android:backgroundTint="#FFFFFF"
+            android:hint="@string/search_hint_string"
+            android:textSize="15sp"
+android:background="@drawable/_bg__frame_2_ek2_shape"
+            />
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_weight="0.5"
+            android:src="@drawable/ic_baseline_translate_24" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:background="@color/white"
+        android:id="@+id/all_surah_rv"
+        android:padding="1dp"
+        />
+
+</LinearLayout>

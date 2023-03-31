@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Qur\'anApp</string>
+    <!--search_bar -->
+    <string name="search_hint_string">Search Aya or Choose Language</string>
+</resources>
