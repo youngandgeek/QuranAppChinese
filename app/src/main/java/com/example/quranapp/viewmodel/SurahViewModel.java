@@ -9,7 +9,7 @@ import com.example.quranapp.response.SurahResponse;
 public class SurahViewModel extends ViewModel {
     private SurahRepo surahRepo;
 
-    public SurahViewModel() {
+public SurahViewModel() {
         surahRepo=new SurahRepo();
     }
 public LiveData<SurahResponse>getSurah (){

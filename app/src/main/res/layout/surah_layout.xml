@@ -1,22 +1,21 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
     app:cardCornerRadius="16dp"
-    app:cardElevation="16dp"
-    android:padding="16dp"
-    android:layout_margin="8dp">
+    app:cardElevation="16dp">
 
     <LinearLayout
-        android:padding="8dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <LinearLayout
-            android:background="@drawable/ic_bg_row"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:background="@drawable/ic_bg_row"
 
             >
 
@@ -24,8 +23,9 @@
                 android:id="@+id/aya_no"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="1"
                 android:layout_margin="10dp"
+                android:text="1"
+                android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -33,48 +33,69 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_weight="2"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="16dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
 
-            <TextView
-                android:id="@+id/english_name"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:text="fathia"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/total_no"
-                android:text="7 aya"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:layout_gravity="start"
+                android:weightSum="1">
 
+                <TextView
+                    android:id="@+id/name_translation_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="fathia"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/arabic_name_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:textAlignment="center"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:layout_gravity="end"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/name_ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="10dp"
+                    android:text="fathia"
+                    android:layout_gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7 ayat"
+                    android:layout_gravity="end"
+                    android:textSize="13sp"
+                    android:layout_marginRight="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
-        <TextView
-            android:id="@+id/name"
-            android:textSize="20sp"
-            android:text="fathia"
-            android:textStyle="bold"
-            android:layout_margin="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:id="@+id/arabic_name"
-            android:textSize="20sp"
-            android:text="fathia"
-            android:textStyle="bold"
-            android:layout_margin="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

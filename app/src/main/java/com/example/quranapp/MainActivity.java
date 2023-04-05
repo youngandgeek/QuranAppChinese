@@ -18,13 +18,12 @@ import com.example.quranapp.viewmodel.SurahViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//tutorial video https://www.youtube.com/watch?v=LIENj4gjx6U&list=PLRfolMBOopvG9UAQIHxXhGOPw_JLeALAN&index=22
 public class MainActivity extends AppCompatActivity implements SurahListener {
 
     private RecyclerView surahRv;
     private SurahAdapter surahAdapter;
     private List<Surah> list;
-    private SurahViewModel surahViewModel;
     private SurahResponse surahResponse;
 
     @Override
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements SurahListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+        WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
@@ -41,13 +40,13 @@ public class MainActivity extends AppCompatActivity implements SurahListener {
         surahRv.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<>();
         //ViewModel class is designed to hold and manage UI-related data in a life-cycle conscious way
-        surahViewModel = new ViewModelProvider(this).get(SurahViewModel.class);
+        SurahViewModel surahViewModel = new ViewModelProvider(this).get(SurahViewModel.class);
         surahViewModel.getSurah().observe(this, surahResponse -> {
             for (int i = 0; i < surahResponse.getList().size(); i++) {
                 list.add(new Surah(surahResponse.getList().get(i).getNumber(),
                         String.valueOf(surahResponse.getList().get(i).getName()),
                         String.valueOf(surahResponse.getList().get(i).getEnglishName()),
-                        //  String.valueOf(surahResponse.getList().get(i).getEnglishNameTranslation()),
+                        String.valueOf(surahResponse.getList().get(i).getEnglishNameTranslation()),
                         surahResponse.getList().get(i).getNumberOfAyahs(),
                         String.valueOf(surahResponse.getList().get(i).getRevelationType())
                 ));

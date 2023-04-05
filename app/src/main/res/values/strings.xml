@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Qur\'anApp</string>
     <!--search_bar -->
-    <string name="search_hint_string">Search Aya or Choose Language</string>
+    <string name="search_hint_string">Search Surah or Choose Language from translate button </string>
 </resources>

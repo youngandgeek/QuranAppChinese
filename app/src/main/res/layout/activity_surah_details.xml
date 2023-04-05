@@ -5,31 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#D5D6D6"
+    android:background="#F6F6F6"
     tools:context=".SurahDetails">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="2dp"
+    android:padding="1dp"
+    android:layout_gravity="center"
+    android:background="@drawable/_bg__frame_2_ek2_shape"
 
+    >
+
+
+    <TextView
+        android:id="@+id/sura_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:text="al fatiha"
+        />
+    <TextView
+        android:id="@+id/sura_transl_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:text="al fatiha"
+        />
+    <TextView
+        android:id="@+id/sura_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#5C5858"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:text="type"
+        />
+
+
+</LinearLayout>
+<!--
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="horizontal"
         android:weightSum="4"
+        android:layout_margin="2dp"
         android:background="@drawable/_bg__frame_2_ek2_shape"
 
         >
 
         <ImageButton
+            android:id="@+id/search_swr_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="0.5"
             android:layout_margin="1dp"
-            android:src="@drawable/ic_baseline_search_24"
-
+            android:src="@drawable/ic_search"
+            android:background="null"
             />
 
         <EditText
-            android:id="@+id/search_ayah"
+            android:id="@+id/search_swr_et"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -37,29 +86,32 @@
             android:layout_weight="3"
             android:textAlignment="center"
             android:textColor="#2E2C2C"
-            android:ems="10"
-            android:maxLines="1"
             android:backgroundTint="#FFFFFF"
             android:hint="@string/search_hint_string"
-            android:textSize="15sp"
-android:background="@drawable/_bg__frame_2_ek2_shape"
+            android:textSize="13sp"
+            android:background="@drawable/_bg__frame_2_ek2_shape"
             />
 
         <ImageButton
+            android:id="@+id/translate_btn"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_margin="1dp"
             android:layout_weight="0.5"
-            android:src="@drawable/ic_baseline_translate_24" />
+            android:background="null"
+            android:src="@drawable/ic_translate" />
     </LinearLayout>
+-->
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="12dp"
-        android:background="@color/white"
         android:id="@+id/all_surah_rv"
-        android:padding="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/_bg__frame_2_ek2_shape"
+        android:backgroundTint="@color/white"
+        tools:listitem="@layout/surah_detail"
+        android:layout_margin="10dp"
+        android:gravity="center"
         />
 
 </LinearLayout>

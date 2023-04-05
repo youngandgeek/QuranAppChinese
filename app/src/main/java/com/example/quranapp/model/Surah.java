@@ -21,7 +21,7 @@ public class Surah {
         this.number = number;
     }
 
-    public Surah(int number, String name, String englishName, int numberOfAyahs, String revelationType) {
+    public Surah(int number, String name, String englishName,String englishNameTranslation, int numberOfAyahs, String revelationType) {
         this.number = number;
         this.name = name;
         this.englishName = englishName;

@@ -19,6 +19,7 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.ViewHolder> 
     private Context context;
     private List<Surah> list;
     private SurahListener surahListener;
+
     public SurahAdapter(Context context, List<Surah> list,SurahListener surahListener) {
         this.context = context;
         this.list = list;
@@ -29,17 +30,19 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.ViewHolder> 
     @Override
     public SurahAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.surah_layout, parent, false);
+                                  .inflate(R.layout.surah_layout, parent, false);
         return new ViewHolder(view,surahListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull SurahAdapter.ViewHolder holder, int position) {
+
         holder.name.setText(list.get(position).getName());
         holder.ayahNumber.setText(String.valueOf(list.get(position).getNumber()));
         holder.surahNameEn.setText(list.get(position).getEnglishName());
         holder.surahNameAr.setText(list.get(position).getEnglishNameTranslation());
-        holder.totalAyatNo.setText(String.valueOf(list.get(position).getNumberOfAyahs()) + "Aya :");
+        holder.totalAyatNo.setText(String.valueOf(list.get(position).getNumberOfAyahs()) +" Aya");
+
     }
 
 
@@ -49,11 +52,11 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.ViewHolder> 
 //pass the Surah listener interface
         public ViewHolder(@NonNull View itemView, SurahListener surahListener) {
             super(itemView);
-            name = itemView.findViewById(R.id.name);
+            name = itemView.findViewById(R.id.name_ar);
             ayahNumber = itemView.findViewById(R.id.aya_no);
             totalAyatNo = itemView.findViewById(R.id.total_no);
-            surahNameAr = itemView.findViewById(R.id.arabic_name);
-            surahNameEn = itemView.findViewById(R.id.english_name);
+            surahNameAr = itemView.findViewById(R.id.arabic_name_en);
+           surahNameEn = itemView.findViewById(R.id.name_translation_en);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

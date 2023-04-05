@@ -7,7 +7,8 @@ import java.util.List;
 
 public class SurahResponse {
 
-/** json data in an array so we initialize it and pass the surah model class
+/**get the api data response and save it to the list of a model class
+ * json data in an array so we initialize it and pass the surah model class
  */
 @SerializedName("data")
     private List<Surah> list;
