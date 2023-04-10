@@ -55,7 +55,7 @@
 
 
 </LinearLayout>
-<!--
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,8 +73,8 @@
             android:layout_gravity="center"
             android:layout_weight="0.5"
             android:layout_margin="1dp"
+            android:background="@drawable/_bg__frame_2_ek2_shape"
             android:src="@drawable/ic_search"
-            android:background="null"
             />
 
         <EditText
@@ -82,13 +82,15 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_margin="2dp"
+            android:layout_margin="1dp"
             android:layout_weight="3"
-            android:textAlignment="center"
             android:textColor="#2E2C2C"
+            android:textColorHint="#E6DDDD"
             android:backgroundTint="#FFFFFF"
             android:hint="@string/search_hint_string"
-            android:textSize="13sp"
+            android:maxLines="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:background="@drawable/_bg__frame_2_ek2_shape"
             />
 
@@ -98,19 +100,18 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_margin="1dp"
+            android:background="@drawable/_bg__frame_2_ek2_shape"
             android:layout_weight="0.5"
-            android:background="null"
             android:src="@drawable/ic_translate" />
     </LinearLayout>
--->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/all_surah_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/_bg__frame_2_ek2_shape"
         android:backgroundTint="@color/white"
-        tools:listitem="@layout/surah_detail"
-        android:layout_margin="10dp"
+        tools:listitem="@layout/ayat_item_layout"
+        android:layout_margin="5dp"
         android:gravity="center"
         />
 

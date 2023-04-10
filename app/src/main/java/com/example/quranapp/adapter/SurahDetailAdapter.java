@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.quranapp.R;
 import com.example.quranapp.model.SurahDetail;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SurahDetailAdapter extends RecyclerView.Adapter<SurahDetailAdapter.ViewHolder> {
@@ -29,7 +30,7 @@ public class SurahDetailAdapter extends RecyclerView.Adapter<SurahDetailAdapter.
     @Override
     public SurahDetailAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.surah_detail, parent, false);
+                .inflate(R.layout.ayat_item_layout, parent, false);
                 return new ViewHolder(view);
     }
 
@@ -60,4 +61,11 @@ public class SurahDetailAdapter extends RecyclerView.Adapter<SurahDetailAdapter.
     public int getItemCount() {
         return surahDetailList.size();
     }
+
+ //for languages
+ public void filter(ArrayList<SurahDetail> details){
+surahDetailList=details;
+notifyDataSetChanged();
+}
+
 }

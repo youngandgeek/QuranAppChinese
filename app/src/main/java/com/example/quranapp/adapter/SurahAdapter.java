@@ -30,7 +30,7 @@ public class SurahAdapter extends RecyclerView.Adapter<SurahAdapter.ViewHolder> 
     @Override
     public SurahAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                                  .inflate(R.layout.surah_layout, parent, false);
+                                  .inflate(R.layout.swr_item_layout, parent, false);
         return new ViewHolder(view,surahListener);
     }
 
