@@ -12,3 +12,7 @@ Rest-Api link: https://quranenc.com/en/home        --   https://quran.com/en
 
 
 
+
+
+https://user-images.githubusercontent.com/37903508/230994965-d442629e-8638-45e1-87a4-ed50a8d91db1.mp4
+
