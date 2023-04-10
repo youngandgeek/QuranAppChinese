@@ -10,6 +10,8 @@ Rest-Api link: https://quranenc.com/en/home        --   https://quran.com/en
 
 
 
+▶️ **PLAY the Preview Video
+**
 
 
 
