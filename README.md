@@ -1,6 +1,6 @@
 # QuranAppChinese
 Salam Alaikum,This is Qur'an Translation Android Application. written in Java with MVVM architecture and using Retrofit REST API 
-I know there are a lot of Qur'an Apps available 😁 so I developed this app 
+I know there are a lot of Qur'an Apps available 😁 so I developed this app..
 Displaying translations of the meanings of the Noble Qur'an from Arabic to Chinese - Chinese2 - Français -Swahili and Japanese  
 I'm not sure but I don't see a lot of resources in these languages available,
 hope someone who would like to know more about Qur'an will find this app helpful 👩‍💻🎉Ramadan Mubarak 🎉
